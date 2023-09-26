@@ -2,7 +2,7 @@ import { socialMediaIcons } from "../../data"
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-100 py-12 lg:py-24 font-roboto">
+    <footer className="bg-gray-100 py-12 lg:py-16 font-roboto">
       <div className="container mx-auto px-4 sm:max-w-[825px] lg:px-6 lg:max-w-[1120px] xl:px-0 xl:max-w-[1300px]">
         <div className="flex justify-between items-center text-[18px]">
         <h1 className="text-purple-700 font-bold cursor-pointer">
