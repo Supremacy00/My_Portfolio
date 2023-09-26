@@ -1,13 +1,18 @@
-import heroImg from "./assets/images/heroImg.png";
-import aboutImage from "./assets/images/aboutImage.png";
-import pcard1 from "./assets/images/pcard1.jpeg";
-import pcard2 from "./assets/images/pcard2.jpeg";
-import pcard3 from "./assets/images/pcard3.jpeg";
-import { SiAdobephotoshop } from "react-icons/si"
+import heroImg from "/images/heroImg.png";
+import aboutImage from "/images/aboutImage.png";
+import pcard1 from "/images/pcard1.jpeg";
+import pcard2 from "/images/pcard2.jpeg";
+import pcard3 from "/images/pcard3.jpeg";
+
+import { GrTechnology } from "react-icons/gr"
+import { PiFileJsx} from "react-icons/pi"
+import { DiPhotoshop } from "react-icons/di"
+import { SiAltiumdesigner } from "react-icons/si"
 import { LiaFacebookF } from "react-icons/lia";
 import { FaYoutube } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
+
 
 export const navData = [
   {
@@ -45,31 +50,34 @@ export const heroData = {
 
 export const skillsData = [
   {
-    skillHeader: "Web Development",
+    skillHeader: "MERN Stack",
     skillPara:
-      "Tempor anim ad esse veniam consequat do voluptate Fugiat minim pariatur exercitation tempor aliqua labore laboris.",
+      "I develop and maintain web applications using Mongo Db, React Js, Node Js and Express Js.",
+      icon: <GrTechnology />,
     id: 1,
     cardColor: true,
   },
   {
-    skillHeader: "Frontend Dev",
+    skillHeader: "Frontend Development",
     skillPara:
-      "Tempor anim ad esse veniam consequat do voluptate Fugiat minim pariatur exercitation tempor aliqua labore laboris.",
+      "I create and design the user interface (UI) and user experience (UX) of websites and web applications.",
+      icon: <PiFileJsx />,
     id: 2,
     cardColor: false,
   },
   {
-    skillHeader: "UI & UX Design",
+    skillHeader: "Photoshop",
     skillPara:
-      "Tempor anim ad esse veniam consequat do voluptate Fugiat minim pariatur exercitation tempor aliqua labore laboris.",
-    skillIcon: <SiAdobephotoshop />,
+      "Photoshop is an image creation, graphic design and photo editing software by Adobe.",
+    icon: <DiPhotoshop/>,
     id: 3,
     cardColor: false,
   },
   {
     skillHeader: "Branding & Logo",
     skillPara:
-      "Tempor anim ad esse veniam consequat do voluptate Fugiat minim pariatur exercitation tempor aliqua labore laboris.",
+      "I create designs to help people to quickly identify their products and organization, to have a unique identity",
+      icon: <SiAltiumdesigner />,
     id: 4,
     cardColor: false,
   },
@@ -80,7 +88,7 @@ export const aboutData = {
   aboutPara: "About",
   aboutHeader: "About Me",
   aboutText:
-    "Tempor culpa dolor elit cillum voluptate. Lorem minim deserunt proident fugiat aliqua nulla ex ad irure dolor laborum. Aute sunt mollit elit cupidatat incididunt quis duis. Nisi duis tempor cillum exercitation fugiat incididunt ea aute non. Et veniam reprehenderit veniam labore ea velit occaecat quis. Occaecat sit proident cillum minim irure est dolore. Dolore dolore in excepteur dolor. Incididunt veniam consectetur duis consectetur. Anim pariatur cillum labore culpa. Ipsum occaecat ad aliqua magna laborum ex enim culpa proident. Laborum et labore excepteur nostrud quis cupidatat excepteur occaecat qui incididunt eiusmod.",
+    "I'm a passionate Front-End developer who specializes in creating dynamic and user-friendly web applications using React JavaScript. With a keen eye for design and a strong command of various technologies, I craft stunning user interfaces and ensure seamless user experiences.",
 };
 
 export const projectData = [
@@ -143,8 +151,8 @@ export const formData = {
   formPara: "Do id sint qui voluptate laboris occaecat.",
   fName: "First Name",
   lName: "Last Name",
-  email: "Email",
-  phone: "Phone Number",
+  eml: "Email",
+  phoneN: "Phone Number",
   optn: "Choose a topic:",
   optnValue1: "Lorem",
   optnValue2: "Lorem",

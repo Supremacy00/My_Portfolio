@@ -39,7 +39,7 @@ const Hero = () => {
           <LazyLoadImage
             src={heroImg}
             alt=""
-            className="mx-auto w-[500px] max-h-[400px] mt-8 md:w-[600px] md:max-h-[450px] md:mt-1 md:text-center lg:max-w-[485px] lg:max-h-[600px] xl:max-w-[550px] "
+            className="mx-auto w-[500px] max-h-[400px] mt-8 md:w-[600px] md:max-h-[450px] md:mt-1 md:text-center lg:max-w-[400px] lg:max-h-[450px] xl:max-w-[450px] "
           />
         </div>
       </div>
