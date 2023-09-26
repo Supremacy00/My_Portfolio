@@ -127,7 +127,7 @@ export const projectData = [
 export const testimonialData = [
   {
     title:
-      "Pariatur ad laboris ex voluptate sunt in sint in. Quis amet quis ullamco tempor est.Eiusmod culpa sunt sunt velit.",
+      "Abdulmuqaddas possesses a unique talent in web development and the ability to craft engaging user experiences.",
     testImg: test1,
     testHeader: "Abbas Kasim",
     testPara: "UI/UX Designer",
@@ -135,7 +135,7 @@ export const testimonialData = [
   },
   {
     title:
-      "Pariatur ad laboris ex voluptate sunt in sint in. Quis amet quis ullamco tempor est.Eiusmod culpa sunt sunt velit.",
+      "He is an exceptional front-end developer known for his meticulous attention to detail, delivering high-quality work. .",
     testImg: test2,
     testHeader: "Ahmad Muhammad Awwal",
     testPara: "Python Developer",
@@ -143,7 +143,7 @@ export const testimonialData = [
   },
   {
     title:
-      "Pariatur ad laboris ex voluptate sunt in sint in. Quis amet quis ullamco tempor est.Eiusmod culpa sunt sunt velit.",
+      "He is a valuable team member, renowned for enhancing project aesthetics through his front-end development skills.",
     testImg: test3,
     testHeader: "Jesse Onyeachu",
     testPara: "Data Analyst",
