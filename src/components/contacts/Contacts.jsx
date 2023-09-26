@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { formData } from "../../data";
-import { collection, addDoc } from "firebase/firestore"; // Import Firestore from your Firebase configuration
+import { collection, addDoc } from "firebase/firestore"; 
 import { db } from "/src/FirebaseConfig.js";
 
 const Contacts = () => {
@@ -23,7 +23,7 @@ const Contacts = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false); // State to track checkbox
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false); 
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -45,19 +45,19 @@ const Contacts = () => {
   };
 
   const handleCheckboxChange = (e) => {
-    setIsCheckboxChecked(e.target.checked); // Update the checkbox state
+    setIsCheckboxChecked(e.target.checked); 
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if the checkbox is checked before allowing form submission
+   
     if (!isCheckboxChecked) {
       alert("Please check the checkbox before submitting.");
       return;
     }
 
-    // Create a Firebase Firestore document with the user's data
+
     const docData = {
       firstName: firstName,
       lastName: lastName,
@@ -70,13 +70,15 @@ const Contacts = () => {
       const docRef = await addDoc(collection(db, "contacts"), docData);
       console.log("Document written with ID: ", docRef.id);
 
-      // Clear the form or perform other actions after successful submission
+     
       setFirstName("");
       setLastName("");
       setEmail("");
       setPhone("");
       setMessage("");
       setIsSubmitted(true);
+
+      
     } catch (error) {
       console.error("Error adding document: ", error);
     }
@@ -88,7 +90,7 @@ const Contacts = () => {
         <form
           action=""
           className="container mx-auto font-roboto py-12 lg:py-24"
-          onSubmit={handleSubmit} // Handle form submission
+          onSubmit={handleSubmit} 
         >
           <div className="px-3.5 sm:mx-auto sm:max-w-[700px] md:max-w-[750px] md:px-6 lg:px-0">
             <div className="text-center mb-8 sm:mb-11">
@@ -183,8 +185,11 @@ const Contacts = () => {
                 </div>
               )}
               <div className="mx-auto mt-6 text-center rounded-[4px] bg-purple-800 py-3 px-4 max-w-[100px] text-white text-[12px] sm:max-w-[130px] sm:mt-3 md:text-[14px] md:py-4 md:px-6 md:font-light md:hover:bg-purple-700 cursor-pointer">
-                <button type="submit">{isSubmitted ? "Submitting..." : formBtn}</button>
+                <button type="submit">{formBtn}</button>
               </div>
+              {isSubmitted && (<div>
+                <h1 className="text-green-700 mt-8 text-center">Form Submitted Successfully</h1>
+              </div>)}
             </div>
           </div>
         </form>
