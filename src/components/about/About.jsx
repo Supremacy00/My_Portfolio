@@ -13,7 +13,7 @@ const About = () => {
   };
 
   return (
-    <div className="container mx-auto pt-12 pb-2 font-roboto px-4 sm:max-w-[825px] lg:py-16 lg:max-w-[1120px] lg:px-6 xl:px-0 lg:flex lg:flex-row-reverse lg:justify-between lg:items-center xl:max-w-[1300px]">
+    <div className="container mx-auto pt-12 pb-2 font-roboto px-4 sm:max-w-[825px] lg:py-16 lg:max-w-[1120px] lg:px-6 xl:px-0 lg:flex lg:flex-row-reverse  lg:justify-between lg:items-center xl:max-w-[1300px]">
       <div className="sm:max-w-[825px] md:mt-0 lg:max-w-[530px] xl:max-w-[650px]">
         <span>
           <h3 className="text-[16px] mb-1">{aboutPara}</h3>
@@ -23,7 +23,7 @@ const About = () => {
         </span>
         <p className="text-[17px] mt-4 md:text-start">{aboutText}</p>
       </div>
-      <div style={containerStyle} className="mx-auto">
+      <div style={containerStyle} className="mx-auto lg:mx-0">
         <LazyLoadImage
           src={aboutImg}
           loading="lazy"
