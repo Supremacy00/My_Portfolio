@@ -16,7 +16,7 @@ const Projects = () => {
           {projectData.map((item) => {
             return (
               <div key={item.id} className="bg-slate-50 rounded-xl shadow-lg group hover:shadow-xl">
-                  <LazyLoadImage loading="lazy" src={item.pCardImg} alt="" className="mx-auto object-cover rounded-xl w-full max-h-[370px] sm:max-h-[320px] group-hover:shadow-xl"/>
+                  <LazyLoadImage loading="lazy" src={item.pCardImg} alt="" className="mx-auto object-cover rounded-xl w-full max-h-[370px] sm:max-h-[230px] lg:max-h-[270px] xl:max-h-[320px] group-hover:shadow-xl"/>
                 <div className="px-6 py-6">
                   <h3 className="text-[23px] mb-2 font-bold">{item.proHeader}</h3>
                   <p className="text-[17px] sm:text-[17px]">{item.proTxt}</p>
