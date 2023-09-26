@@ -1,6 +1,5 @@
 import { projectData } from "../../data";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
-import { GoHorizontalRule } from "react-icons/go";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 

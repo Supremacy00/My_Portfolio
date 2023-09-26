@@ -6,9 +6,9 @@ const About = () => {
   const { aboutImg, aboutPara, aboutHeader, aboutText } = aboutData;
 
   const containerStyle = {
-    backgroundImage: `url(${"./images/background.png"})`, // Set the background image
-    backgroundSize: 'cover', // Adjust background size as needed
-    backgroundRepeat: 'no-repeat', // Adjust background repeat as needed
+    backgroundImage: `url(${"./images/background.png"})`, 
+    backgroundSize: 'cover', 
+    backgroundRepeat: 'no-repeat', 
     width: "400px"
   };
 

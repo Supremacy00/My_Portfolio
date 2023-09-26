@@ -22,7 +22,7 @@ const Expertise = () => {
                   }`}
                 >
                   <div className="mx-auto px-6 py-10 rounded-[6px] bg-gray-100 shadow-md max-w-full min-h-[240px] md:max-w-[1000px]  lg:pt-12 lg:max-w-[1070px] lg:min-h-[300px] hover:shadow-lg cursor-pointer ">
-                    <div className=" bg-white shadow-sm px-3.5 py-3.5 lg:px-3.5 lg:py-3.5 rounded-md w-16 h-16 ">
+                    <div className=" bg-white shadow-sm px-3.5 py-3.5 rounded-md w-16 h-16 ">
                      <span className=" text-4xl "> {item.icon}</span>
                     </div>
                     <h1 className="text-[23px] font-bold mt-10 sm:mt-8 md:mt-11 xl:text-[23px] lg:mt-12 xl:mt-11">

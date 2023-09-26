@@ -1,3 +1,4 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { testimonialData } from "../../data";
 import { AiFillStar } from "react-icons/ai";
 
@@ -42,7 +43,7 @@ const Testimonials = () => {
                     </div>
                   </div>
                   <div className="flex justify-start mx-auto px-6 items-center space-x-5 mt-8   sm:mt-5 md:px-0 md:w-[280px] md:mt-8 md:justify-start lg:w-[275px]  xl:w-[340px] ">
-                    <img
+                    <LazyLoadImage
                       src={item.testImg}
                       alt=""
                       className="w-[58px] h-[58px] rounded-full cover  "
