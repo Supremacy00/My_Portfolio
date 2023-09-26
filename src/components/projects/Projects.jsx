@@ -15,8 +15,8 @@ const Projects = () => {
         <ul className="mx-auto grid gap-8 gap-y-16 mt-8 max-w-full text-gray-900 sm:grid-cols-2 sm:max-w-[825px] md:max-w-[1000px] lg:grid-cols-3 lg:max-w-[1070px] xl:max-w-[1300px]">
           {projectData.map((item) => {
             return (
-              <div key={item.id} className="bg-slate-50 rounded-xl shadow-lg group hover:shadow-xl">
-                  <LazyLoadImage loading="lazy" src={item.pCardImg} alt="" className="mx-auto object-cover rounded-xl w-full max-h-[370px] sm:max-h-[230px] lg:max-h-[270px] xl:max-h-[320px] group-hover:shadow-xl"/>
+              <div key={item.id} className="bg-slate-50 rounded-xl shadow-lg group hover:shadow-lg">
+                  <LazyLoadImage loading="lazy" src={item.pCardImg} alt="" className="mx-auto object-cover cursor-pointer rounded-xl w-full max-h-[370px] sm:max-h-[230px] lg:max-h-[270px] xl:max-h-[320px] group-hover:shadow-lg"/>
                 <div className="px-6 py-6">
                   <h3 className="text-[23px] mb-2 font-bold">{item.proHeader}</h3>
                   <p className="text-[17px] sm:text-[17px]">{item.proTxt}</p>
