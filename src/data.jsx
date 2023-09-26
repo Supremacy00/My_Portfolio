@@ -1,8 +1,11 @@
-import heroImg from "/images/heroImg.png";
+import heroImg from "/images/heroImg.jpg";
 import aboutImage from "/images/aboutImage.png";
-import pcard1 from "/images/pcard1.jpeg";
-import pcard2 from "/images/pcard2.jpeg";
-import pcard3 from "/images/pcard3.jpeg";
+import pcard1 from "/images/pcard1.jpg";
+import pcard2 from "/images/pcard2.jpg";
+import pcard3 from "/images/pcard3.jpg";
+import test1 from "/images/test1.jpg"
+import test2 from "/images/test2.jpg"
+import test3 from "/images/test3.jpg"
 
 import { GrTechnology } from "react-icons/gr"
 import { PiFileJsx} from "react-icons/pi"
@@ -43,7 +46,7 @@ export const heroData = {
   heroHeader2: "Front-End applications ",
   heroHeader3: "using React JavaScript ",
   heroPara2:
-    "Ad adipisicing pariatur aute consectetur ad incididunt incididunt Amet Lorem esse in pariatur deserunt aliquip dolore veniam fugiat proident consectetur.",
+    "Front-end development, often referred to as the client side of web development, is a dynamic and creative discipline that focuses on crafting the user interface and user experience of websites and web applications.",
   heroBtn: "Get In Touch",
   heroImg: heroImg,
 };
@@ -52,7 +55,7 @@ export const skillsData = [
   {
     skillHeader: "MERN Stack",
     skillPara:
-      "I develop and maintain web applications using Mongo Db, React Js, Node Js and Express Js.",
+      "I develop and maintain web applications using Mongo Db, React, Node and Express.",
       icon: <GrTechnology />,
     id: 1,
     cardColor: true,
@@ -60,7 +63,7 @@ export const skillsData = [
   {
     skillHeader: "Frontend Development",
     skillPara:
-      "I create and design the user interface (UI) and user experience (UX) of websites and web applications.",
+      "I create and design the user interface (UI) and user experience (UX) of websites.",
       icon: <PiFileJsx />,
     id: 2,
     cardColor: false,
@@ -68,7 +71,7 @@ export const skillsData = [
   {
     skillHeader: "Photoshop",
     skillPara:
-      "Photoshop is an image creation, graphic design and photo editing software by Adobe.",
+      "Photoshop is an image creation, graphic design and photo editing software.",
     icon: <DiPhotoshop/>,
     id: 3,
     cardColor: false,
@@ -76,7 +79,7 @@ export const skillsData = [
   {
     skillHeader: "Branding & Logo",
     skillPara:
-      "I create designs to help people to quickly identify their products and organization, to have a unique identity",
+      "I create designs to help people to quickly identify their products and organization.",
       icon: <SiAltiumdesigner />,
     id: 4,
     cardColor: false,
@@ -94,26 +97,29 @@ export const aboutData = {
 export const projectData = [
   {
     pCardImg: pcard1,
-    proHeader: "Angular",
+    proHeader: "Movie Box",
     proTxt:
-      "Veniam duis reprehenderit culpa sint voluptate in elit aute occaecat esse.",
+      "A MovieBox to discover, explore movies, view movie details.",
     proBtn: "View Project",
+    href: "https://zuri-internship-task-two-git-main-supremacy00.vercel.app/",
     id: 1,
   },
   {
     pCardImg: pcard2,
-    proHeader: "Workplace",
+    proHeader: "Gallery App",
     proTxt:
-      "Veniam duis reprehenderit culpa sint voluptate in elit aute occaecat esse.",
+      "A gallery app where users can view and search for their favorite image.",
     proBtn: "View Project",
+    href:"https://zuri-internship-task-three-git-main-supremacy00.vercel.app/",
     id: 2,
   },
   {
     pCardImg: pcard3,
-    proHeader: "Coding",
+    proHeader: "My Profile",
     proTxt:
-      "Veniam duis reprehenderit culpa sint voluptate in elit aute occaecat esse.",
+      "A very simple profile, that displays my details as a front-end developer.",
     proBtn: "View Project",
+    href:"https://zuri-internship-task-one-git-main-supremacy00.vercel.app/",
     id: 3,
   },
 ];
@@ -122,7 +128,7 @@ export const testimonialData = [
   {
     title:
       "Pariatur ad laboris ex voluptate sunt in sint in. Quis amet quis ullamco tempor est.Eiusmod culpa sunt sunt velit.",
-    testImg: pcard3,
+    testImg: test1,
     testHeader: "Abbas Kasim",
     testPara: "UI/UX Designer",
     id: 1,
@@ -130,7 +136,7 @@ export const testimonialData = [
   {
     title:
       "Pariatur ad laboris ex voluptate sunt in sint in. Quis amet quis ullamco tempor est.Eiusmod culpa sunt sunt velit.",
-    testImg: pcard3,
+    testImg: test2,
     testHeader: "Ahmad Muhammad Awwal",
     testPara: "Python Developer",
     id: 2,
@@ -138,7 +144,7 @@ export const testimonialData = [
   {
     title:
       "Pariatur ad laboris ex voluptate sunt in sint in. Quis amet quis ullamco tempor est.Eiusmod culpa sunt sunt velit.",
-    testImg: pcard3,
+    testImg: test3,
     testHeader: "Jesse Onyeachu",
     testPara: "Data Analyst",
     id: 3,
@@ -153,10 +159,6 @@ export const formData = {
   lName: "Last Name",
   eml: "Email",
   phoneN: "Phone Number",
-  optn: "Choose a topic:",
-  optnValue1: "Lorem",
-  optnValue2: "Lorem",
-  optnValue3: "Lorem",
   tArea: "Message",
   terms: "I accept the terms",
   formBtn: "Submit",

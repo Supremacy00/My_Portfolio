@@ -13,7 +13,7 @@ const Hero = () => {
     heroImg,
   } = heroData;
   return (
-    <section className="w-full px-4 bg-gray-100 mt-4 pt-24 pb-12 font-roboto lg:py-24 lg:mt-0 lg:px-6 xl:px-0 ">
+    <section className="w-full px-4 bg-gray-100 mt-2 pt-24 pb-12 font-roboto lg:py-24 lg:mt-0 lg:px-6 xl:px-0 ">
       <div className="container mx-auto sm:max-w-[790px] lg:max-w-[1070px] lg:text-left md:items-center lg:flex lg:justify-between lg:items-center xl:max-w-[1300px]">
         <div className="mx-auto text-grey-900 -mt-12 lg:mt-0 ">
           <h3 className="lg:max-w-[600px]leading-[48px] md:text-[14px] lg:text-[16px] ">
@@ -39,7 +39,7 @@ const Hero = () => {
           <LazyLoadImage
             src={heroImg}
             alt=""
-            className="mx-auto w-[500px] max-h-[400px] mt-8 md:w-[600px] md:max-h-[450px] md:mt-1 md:text-center lg:max-w-[400px] lg:max-h-[450px] xl:max-w-[450px] "
+            className="mx-auto w-[500px] max-h-[400px] mt-8 md:w-[600px] md:max-h-[450px] md:mt-1 md:text-center lg:max-w-[485px] lg:max-h-[600px] xl:max-w-[550px] "
           />
         </div>
       </div>

@@ -12,10 +12,6 @@ const Contacts = () => {
     lName,
     eml,
     phoneN,
-    optn,
-    optnValue1,
-    optnValue2,
-    optnValue3,
     tArea,
     terms,
     formBtn,
@@ -25,7 +21,6 @@ const Contacts = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [selectedTopic, setSelectedTopic] = useState(""); // Separate state for the selected topic
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false); // State to track checkbox
@@ -44,14 +39,9 @@ const Contacts = () => {
     if (id === "phone") {
       setPhone(value);
     }
-    // Removed handling for "topic" here
     if (id === "message") {
       setMessage(value);
     }
-  };
-
-  const handleTopicChange = (e) => {
-    setSelectedTopic(e.target.value); // Update the selected topic
   };
 
   const handleCheckboxChange = (e) => {
@@ -73,7 +63,6 @@ const Contacts = () => {
       lastName: lastName,
       email: email,
       phone: phone,
-      topic: selectedTopic, // Use the selectedTopic state
       message: message,
     };
 
@@ -86,7 +75,6 @@ const Contacts = () => {
       setLastName("");
       setEmail("");
       setPhone("");
-      setSelectedTopic(""); // Clear the selected topic
       setMessage("");
       setIsSubmitted(true);
     } catch (error) {
@@ -162,23 +150,6 @@ const Contacts = () => {
                 </div>
               </div>
               <div className="mt-4 sm:mt-6">
-                <label htmlFor="topic" className="block mb-1.5">
-                  {optn}
-                </label>
-                <select
-                  name="topic"
-                  id="topic"
-                  className="rounded-md border border-purple-800 w-full bg-white h-[44px] sm:h-[50px]"
-                  value={selectedTopic} // Use the selectedTopic state
-                  onChange={handleTopicChange} // Use handleTopicChange for select
-                >
-                  <option value="Lorem">Select one...</option>
-                  <option value={optnValue1}>{optnValue1}</option>
-                  <option value={optnValue2}>{optnValue2}</option>
-                  <option value={optnValue3}>{optnValue3}</option>
-                </select>
-              </div>
-              <div className="mt-4 sm:mt-6">
                 <label htmlFor="message" className="block mb-1.5">
                   {tArea}
                 </label>
@@ -206,8 +177,8 @@ const Contacts = () => {
                   {terms}
                 </label>
               </div>
-              {!isCheckboxChecked && (
-                <div className="text-red-500 font-medium mt-2">
+              {!isCheckboxChecked &&  (
+                <div className="text-red-500 font-light mt-2 ">
                   Please check the checkbox before submitting.
                 </div>
               )}

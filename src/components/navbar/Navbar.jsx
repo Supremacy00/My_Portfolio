@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className={`${isOpen && "fixed top-0 right-0 z-50 left-0 bg-white h-[58px]"}  lg:pb-[20px] lg:px-6`}>
       <div className="container mx-auto text-[20px] font-roboto sm:max-w-[1300px] lg:flex lg:justify-between lg:items-center lg:text-[16px] lg:py-[2px] lg:max-w-[1070px] xl:max-w-[1300px]  ">
-        <div className="flex justify-between items-center mx-4 py-4 text-[19px] lg:mx-0 lg:text-[18px]">
+        <div className="flex justify-between  mx-4 pt-4 text-[19px] lg:mx-0 lg:text-[18px]">
           <RouterLink to="/"> 
             <h1 className="text-purple-700 font-bold cursor-pointer">
               Abdul<span className="text-black">Muqaddas</span>
