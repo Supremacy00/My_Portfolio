@@ -143,7 +143,7 @@ export const testimonialData = [
   },
   {
     title:
-      "He is a valuable team member, renowned for enhancing project aesthetics through his front-end development skills.",
+      "A valuable team member, renowned for enhancing project aesthetics through his front-end development skills.",
     testImg: test3,
     testHeader: "Jesse Onyeachu",
     testPara: "Data Analyst",
