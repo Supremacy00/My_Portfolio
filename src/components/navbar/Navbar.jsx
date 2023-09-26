@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex justify-between  mx-4 pt-4 text-[19px] lg:mx-0 lg:text-[18px]">
           <RouterLink to="/"> 
             <h1 className="text-purple-700 font-bold cursor-pointer">
-              Abdul<span className="text-black">Muqaddas</span>
+              Abdul<span>Muqaddas</span>
             </h1>
           </RouterLink>
           <span

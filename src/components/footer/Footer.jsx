@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4 sm:max-w-[825px] lg:px-6 lg:max-w-[1120px] xl:px-0 xl:max-w-[1300px]">
         <div className="flex justify-between items-center text-[16px] md:text-[18px]">
         <h1 className="text-purple-700 font-bold cursor-pointer">
-              Abdul<span className="text-black">Muqaddas</span>
+              Abdul<span>Muqaddas</span>
             </h1>
           <div className="flex items-center gap-5 text-[16px] md:text-xl">
           {socialMediaIcons.map((item) => (
