@@ -80,7 +80,7 @@ const Contacts = () => {
 
       setTimeout(() => {
         setIsSubmitted(false);
-      }, 3000); // Adjust the delay as needed
+      }, 3000); 
     } catch (error) {
       console.error("Error adding document: ", error);
     }
