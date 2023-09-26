@@ -78,7 +78,9 @@ const Contacts = () => {
       setMessage("");
       setIsSubmitted(true);
 
-      
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 3000); // Adjust the delay as needed
     } catch (error) {
       console.error("Error adding document: ", error);
     }
