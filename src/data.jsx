@@ -1,4 +1,4 @@
-import heroImg from "/images/heroImg.png";
+
 import aboutImage from "/images/aboutImage.png";
 import pcard1 from "/images/pcard1.jpeg";
 import pcard2 from "/images/pcard2.jpeg";
