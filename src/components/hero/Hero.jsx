@@ -19,7 +19,7 @@ const Hero = () => {
           <h3 className="lg:max-w-[600px]leading-[48px] md:text-[14px] lg:text-[16px] ">
             {heroPara}
           </h3>
-          <h1 className="text-[45px] font-medium mt-8 leading-[55px] md:text-[40px] md:font-semibold md:leading-[52px] lg:text-[43px] lg:leading-[60px] xl:leading-[65px] xl:text-5xl">
+          <h1 className="text-[35px] font-medium mt-8 leading-[45px] md:text-[40px] md:font-semibold md:leading-[52px] lg:text-[43px] lg:leading-[60px] xl:leading-[65px] xl:text-5xl">
             <span>{heroHeader1}</span>
             <span className=" text-purple-800">{heroHeader2}</span>
             <span>{heroHeader3}</span>
