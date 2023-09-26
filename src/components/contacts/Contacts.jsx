@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { formData } from "../../data";
-import { collection, addDoc } from "firebase/firestore"; 
+import { collection, addDoc } from "firebase/firestore";
 import { db } from "/src/FirebaseConfig.js";
 
 const Contacts = () => {
@@ -23,8 +23,8 @@ const Contacts = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false); 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -46,19 +46,12 @@ const Contacts = () => {
   };
 
   const handleCheckboxChange = (e) => {
-    setIsCheckboxChecked(e.target.checked); 
+    setIsCheckboxChecked(e.target.checked);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true)
-
-   
-    if (!isCheckboxChecked) {
-      alert("Please check the checkbox before submitting.");
-      return;
-    }
-
+    setIsSubmitting(true);
 
     const docData = {
       firstName: firstName,
@@ -69,25 +62,34 @@ const Contacts = () => {
     };
 
     try {
-      const docRef = await addDoc(collection(db, "contacts"), docData);
-      console.log("Document written with ID: ", docRef.id);
+      await addDoc(collection(db, "Contacts"), docData);
 
-     
       setFirstName("");
       setLastName("");
       setEmail("");
       setPhone("");
       setMessage("");
+
       setIsSubmitted(true);
-      setIsSubmitting(false)
+      setIsSubmitting(false);
 
       setTimeout(() => {
         setIsSubmitted(false);
-      }, 5000); 
+      }, 5000);
+
+      
     } catch (error) {
       console.error("Error adding document: ", error);
     }
   };
+
+  const handleClick = () => {
+    if (isCheckboxChecked) {
+      handleSubmit()
+    } else {
+      setIsCheckboxChecked(false)
+    }
+  }
 
   return (
     <>
@@ -95,7 +97,7 @@ const Contacts = () => {
         <form
           action=""
           className="container mx-auto font-roboto py-12 lg:py-24"
-          onSubmit={handleSubmit} 
+          onSubmit={handleSubmit}
         >
           <div className="px-3.5 sm:mx-auto sm:max-w-[700px] md:max-w-[750px] md:px-6 lg:px-0">
             <div className="text-center mb-8 sm:mb-11">
@@ -165,7 +167,7 @@ const Contacts = () => {
                   {tArea}
                 </label>
                 <textarea
-                required
+                  required
                   name=""
                   id="message"
                   cols="30"
@@ -179,28 +181,33 @@ const Contacts = () => {
               <div className="flex items-center mt-2">
                 <input
                   type="checkbox"
-                  required
+                  
                   name="checkbox"
                   id="checkbox"
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
                   onChange={handleCheckboxChange}
                   checked={isCheckboxChecked}
                 />
-                <label htmlFor="checkbox" className="font-light text-[15px] ml-2">
+                <label
+                  htmlFor="checkbox"
+                  className="font-light text-[15px] ml-2"
+                >
                   {terms}
                 </label>
               </div>
-              {!isCheckboxChecked &&  (
-                <div className="text-red-500 font-light mt-2 ">
-                  Please check the checkbox before submitting.
+              
+              <div className="mx-auto mt-6 text-center rounded-[4px] bg-purple-800 py-3 px-4 max-w-[100px] text-white text-[12px] sm:max-w-[130px] sm:mt-3 md:text-[14px] md:py-4 md:px-6 md:font-light md:hover:bg-purple-700 cursor-pointer">
+                <button type="submit" onClick={handleClick}>
+                  {isSubmitting ? "Submitting..." : formBtn}
+                </button>
+              </div>
+              {isSubmitted && (
+                <div>
+                  <h1 className="text-green-700 mt-8 text-center">
+                    Form Submitted Successfully
+                  </h1>
                 </div>
               )}
-              <div className="mx-auto mt-6 text-center rounded-[4px] bg-purple-800 py-3 px-4 max-w-[100px] text-white text-[12px] sm:max-w-[130px] sm:mt-3 md:text-[14px] md:py-4 md:px-6 md:font-light md:hover:bg-purple-700 cursor-pointer">
-                <button type="submit">{isSubmitting ? "Submitting..." : formBtn}</button>
-              </div>
-              {isSubmitted && (<div>
-                <h1 className="text-green-700 mt-8 text-center">Form Submitted Successfully</h1>
-              </div>)}
             </div>
           </div>
         </form>
