@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { BsArrowUpCircleFill } from "react-icons/bs";
 
@@ -19,8 +19,6 @@ const ScrollToNav = () => {
     };
 
     window.addEventListener("scroll", scrollHandler);
-
-    // Cleanup function to remove the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", scrollHandler);
     };

@@ -1,5 +1,4 @@
-// Home.js
-import { Element } from "react-scroll"; // Import Element
+import { Element } from "react-scroll";
 import Hero from "../hero/Hero";
 import Expertise from "../expertise/Expertise";
 import About from "../about/About";
