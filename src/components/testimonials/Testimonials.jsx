@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 
 const Testimonials = () => {
   return (
-    <div className="bg-gray-100 py-12 font-roboto lg:py-24">
+    <div className=" py-12 font-roboto lg:py-24">
       <div className=" lg:px-6 xl:px-0">
         <div className="container mx-auto px-4 sm:max-w-[825px] lg:px-0 lg:max-w-[1200px] xl:px-0 xl:max-w-[1300px]">
           <div className=" mx-auto sm:max-w-[825px] lg:max-w-[1070px] xl:max-w-[1300px]">
