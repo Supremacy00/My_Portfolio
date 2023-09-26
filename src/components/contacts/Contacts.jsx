@@ -110,6 +110,7 @@ const Contacts = () => {
                   </label>
                   <input
                     type="text"
+                    required
                     id="firstName"
                     className="rounded-md border border-purple-800 w-full px-2 py-2 sm:h-[50px]"
                     value={firstName}
@@ -122,6 +123,7 @@ const Contacts = () => {
                   </label>
                   <input
                     type="text"
+                    required
                     id="lastName"
                     className="rounded-md border border-purple-800 w-full px-2 py-2 sm:h-[50px]"
                     value={lastName}
@@ -134,6 +136,7 @@ const Contacts = () => {
                   </label>
                   <input
                     type="text"
+                    required
                     id="email"
                     className="rounded-md border border-purple-800 w-full px-2 py-2 sm:h-[50px]"
                     value={email}
@@ -147,6 +150,7 @@ const Contacts = () => {
                   <input
                     type="text"
                     id="phone"
+                    required
                     className="rounded-md border border-purple-800 w-full px-2 py-2 sm:h-[50px]"
                     value={phone}
                     onChange={handleInputChange}
@@ -158,6 +162,7 @@ const Contacts = () => {
                   {tArea}
                 </label>
                 <textarea
+                required
                   name=""
                   id="message"
                   cols="30"
@@ -171,6 +176,7 @@ const Contacts = () => {
               <div className="flex items-center mt-2">
                 <input
                   type="checkbox"
+                  required
                   name="checkbox"
                   id="checkbox"
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
@@ -187,7 +193,7 @@ const Contacts = () => {
                 </div>
               )}
               <div className="mx-auto mt-6 text-center rounded-[4px] bg-purple-800 py-3 px-4 max-w-[100px] text-white text-[12px] sm:max-w-[130px] sm:mt-3 md:text-[14px] md:py-4 md:px-6 md:font-light md:hover:bg-purple-700 cursor-pointer">
-                <button type="submit">{formBtn}</button>
+                <button type="submit">{isSubmitted ? "Submitting..." : formBtn}</button>
               </div>
               {isSubmitted && (<div>
                 <h1 className="text-green-700 mt-8 text-center">Form Submitted Successfully</h1>
