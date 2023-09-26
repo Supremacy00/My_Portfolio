@@ -23,6 +23,7 @@ const Contacts = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false); 
 
   const handleInputChange = (e) => {
@@ -50,6 +51,7 @@ const Contacts = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true)
 
    
     if (!isCheckboxChecked) {
@@ -77,10 +79,11 @@ const Contacts = () => {
       setPhone("");
       setMessage("");
       setIsSubmitted(true);
+      setIsSubmitting(false)
 
       setTimeout(() => {
         setIsSubmitted(false);
-      }, 3000); 
+      }, 5000); 
     } catch (error) {
       console.error("Error adding document: ", error);
     }
@@ -193,7 +196,7 @@ const Contacts = () => {
                 </div>
               )}
               <div className="mx-auto mt-6 text-center rounded-[4px] bg-purple-800 py-3 px-4 max-w-[100px] text-white text-[12px] sm:max-w-[130px] sm:mt-3 md:text-[14px] md:py-4 md:px-6 md:font-light md:hover:bg-purple-700 cursor-pointer">
-                <button type="submit">{isSubmitted ? "Submitting..." : formBtn}</button>
+                <button type="submit">{isSubmitting ? "Submitting..." : formBtn}</button>
               </div>
               {isSubmitted && (<div>
                 <h1 className="text-green-700 mt-8 text-center">Form Submitted Successfully</h1>
