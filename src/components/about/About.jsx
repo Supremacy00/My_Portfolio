@@ -9,6 +9,7 @@ const About = () => {
     backgroundImage: `url(${"./images/background.png"})`, // Set the background image
     backgroundSize: 'cover', // Adjust background size as needed
     backgroundRepeat: 'no-repeat', // Adjust background repeat as needed
+    width: "400px"
   };
 
   return (
